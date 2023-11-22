@@ -22,13 +22,13 @@ class DPP:
 
         # tuple of activity images (correspond to self._philo_state)
         self._act_img = (
-            PhotoImage(file=HOME_DIR + "/img/thinking.gif"),
-            PhotoImage(file=HOME_DIR + "/img/hungry.gif"),
-            PhotoImage(file=HOME_DIR + "/img/eating.gif"),
+            PhotoImage(file=f"{HOME_DIR}/img/thinking.gif"),
+            PhotoImage(file=f"{HOME_DIR}/img/hungry.gif"),
+            PhotoImage(file=f"{HOME_DIR}/img/eating.gif"),
         )
         # tuple of philo canvas images (correspond to self._philo_obj)
         self._philo_img = (\
-            QView.canvas.create_image(190,  57, image=self._act_img[0]),
+                QView.canvas.create_image(190,  57, image=self._act_img[0]),
             QView.canvas.create_image(273, 100, image=self._act_img[0]),
             QView.canvas.create_image(237, 185, image=self._act_img[0]),
             QView.canvas.create_image(146, 185, image=self._act_img[0]),
@@ -36,8 +36,8 @@ class DPP:
         )
 
         # button images for UP and DOWN
-        self.img_UP  = PhotoImage(file=HOME_DIR + "/img/BTN_UP.gif")
-        self.img_DWN = PhotoImage(file=HOME_DIR + "/img/BTN_DWN.gif")
+        self.img_UP = PhotoImage(file=f"{HOME_DIR}/img/BTN_UP.gif")
+        self.img_DWN = PhotoImage(file=f"{HOME_DIR}/img/BTN_DWN.gif")
 
         # images of a button for pause/serve
         self.btn = QView.canvas.create_image(200, 120, image=self.img_UP)
